@@ -16,7 +16,7 @@ Represents a car in the system.
 - `Model`: The model of the car.
 - `regNo`: The registration number of the car.
 - `Condition`: The condition of the car (available, rented, etc.).
-- `rented_to`: The ID of the user to whom the car is rented.
+- `rented_to`: The ID of the user to whom the car is rented or ID of manager if car is not rented.
 - `due_date`: The due date for returning the car.
 
 #### Functions:
@@ -27,7 +27,7 @@ Represents a car in the system.
 - `void Show_duedate()`: Shows the due date for the car.
 - `bool operator==(const Car &c) const`: Overloaded equality operator.
 - `bool operator<(const Car &c) const`: Overloaded less than operator for sorting cars in database.
-- `void Rented()`: Marks the car as rented.
+- `void Rented()`: Displays if car is available or User ID whom it is rented to.
 - `void Display()`: Displays the car's details.
 
 ### Car_DB
@@ -123,7 +123,7 @@ Manages the collection of users in the system.
 
 ## Helper Functions
 
-- `void Login()`: Handles user login.
+- `void Login()`: Handles user login, dummy user is logged in when no real user is logged in.
 - `void Show_today()`: Displays the current day in the system.
 
 ## Variables
@@ -136,13 +136,13 @@ Manages the collection of users in the system.
 1. **Compile the code** using your preferred C++ compiler. For example:
 
    ```sh
-   g++ -o car_rental main.cpp
+   g++ -o main.cpp
    ```
 
 2. **Run the executable**:
 
    ```sh
-   ./car_rental
+   ./main
    ```
 
 3. **Interact with the system** as prompted. Use the login function to log in as different users and perform various operations like renting cars, adding users, and managing the car database.
